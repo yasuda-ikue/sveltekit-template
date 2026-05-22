@@ -90,7 +90,6 @@ export default defineConfig(
           allowDefaultProject: [
             'eslint.config.ts',
             'svelte.config.js',
-            '.storybook/*.ts',
             'vitest.shims.d.ts',
           ],
         },
