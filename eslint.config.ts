@@ -38,7 +38,21 @@ export default defineConfig(
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node,
+      },
+    },
+  },
+  {
+    // サーバー用ファイルや、設定ファイルだけを対象にする
+    files: [
+      'src/**/*.server.ts',
+      'src/**/*.server.js',
+      'vite.config.ts',
+      'svelte.config.js',
+      '.storybook/**/*.ts',
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.node, // ここでだけ Node.js のグローバル変数（processなど）を許可する
       },
     },
   },

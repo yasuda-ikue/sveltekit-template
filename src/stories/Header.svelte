@@ -2,12 +2,12 @@
   import './header.css';
   import Button from './Button.svelte';
 
-  interface Props {
+  type Props = {
     user?: { name: string };
     onLogin?: () => void;
     onLogout?: () => void;
     onCreateAccount?: () => void;
-  }
+  };
 
   const { user, onLogin, onLogout, onCreateAccount }: Props = $props();
 </script>
