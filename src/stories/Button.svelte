@@ -1,7 +1,7 @@
 <script lang="ts">
   import './button.css';
 
-  interface Props {
+  type Props = {
     /** Is this the principal call to action on the page? */
     primary?: boolean;
     /** What background color to use */
@@ -12,12 +12,12 @@
     label: string;
     /** The onclick event handler */
     onclick?: () => void;
-  }
+  };
 
   const { primary = false, backgroundColor, size = 'medium', label, ...props }: Props = $props();
-  
-  let mode = $derived(primary ? 'storybook-button--primary' : 'storybook-button--secondary');
-  let style = $derived(backgroundColor ? `background-color: ${backgroundColor}` : '');
+
+  const mode = $derived(primary ? 'storybook-button--primary' : 'storybook-button--secondary');
+  const style = $derived(backgroundColor ? `background-color: ${backgroundColor}` : '');
 </script>
 
 <button

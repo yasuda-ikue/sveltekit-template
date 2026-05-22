@@ -201,7 +201,7 @@ export default defineConfig(
 
       'prefer-const': 'off', // eslint推奨設定のprefer-constはコンフリクトするのでoff
       '@stylistic/indent': 'off', // Stylisticのindentはコンフリクトするのでoff
-      '@typescript-eslint/no-floating-promises': 'off', // Svelte@5はTop-level awaitに対応していないのでoff
+      '@typescript-eslint/no-floating-promises': 'off', // Svelteファイルでは未処理Promise検知で誤検知するためoff
       'svelte/no-navigation-without-resolve': 'off', // 一旦off
     },
   },
