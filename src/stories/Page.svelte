@@ -2,7 +2,7 @@
   import './page.css';
   import Header from './Header.svelte';
 
-  const user = $state<{ name: string }>();
+  let user = $state<{ name: string }>();
 </script>
 
 <article>

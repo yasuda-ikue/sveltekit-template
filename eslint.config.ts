@@ -87,11 +87,7 @@ export default defineConfig(
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: [
-            'eslint.config.ts',
-            'svelte.config.js',
-            'vitest.shims.d.ts',
-          ],
+          allowDefaultProject: [],
         },
         tsconfigRootDir: import.meta.dirname,
       },
