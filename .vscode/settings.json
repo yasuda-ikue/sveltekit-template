@@ -1,0 +1,42 @@
+{
+  "editor.tabSize": 2, // インデントをスペース2つに固定
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[svelte]": {
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+  },
+  "eslint.format.enable": false, // codeActionsOnSaveだけで扱うので無効
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "svelte"
+  ],
+  "css.validate": false,
+  "typescript.suggest.autoImports": false, // Svelte機能拡張の遅延が激しいので無効
+  "javascript.suggest.autoImports": false, // Svelte機能拡張の遅延が激しいので無効
+  "typescript.updateImportsOnFileMove.enabled": "never", // Svelte機能拡張の遅延が激しいので無効
+  "javascript.updateImportsOnFileMove.enabled": "never", // Svelte機能拡張の遅延が激しいので無効
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/*.ts.map": true,
+    "**/*.css.d.ts": true,
+    "**/.svelte-kit/**": true,
+  },
+  "files.insertFinalNewline": true
+}
