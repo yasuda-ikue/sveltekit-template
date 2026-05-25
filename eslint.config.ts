@@ -35,10 +35,12 @@ export default defineConfig(
 
   /** 環境変数 */
   {
+    // 通常のファイルやSvelteコンポーネントを対象にする
+    files: ['src/**/*.svelte', 'src/**/*.ts', 'src/**/*.js'],
+    ignores: ['src/**/*.server.ts', 'src/**/*.server.js'],
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node,
       },
     },
   },
@@ -51,6 +53,11 @@ export default defineConfig(
       'svelte.config.js',
       '.storybook/**/*.ts',
     ],
+    languageOptions: {
+      globals: {
+        ...globals.node, // ここでだけ Node.js のグローバル変数（processなど）を許可する
+      },
+    },
   },
 
   /** eslint推奨ルール */
@@ -232,6 +239,7 @@ export default defineConfig(
       '**/*.d.ts',
       '*.config.ts',
       '*.config.js',
+      'eslint.config.ts',
       '.storybook/*.ts',
     ],
     rules: {
