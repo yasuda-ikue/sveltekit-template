@@ -38,6 +38,7 @@ export default defineConfig(
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
     },
   },
@@ -50,11 +51,6 @@ export default defineConfig(
       'svelte.config.js',
       '.storybook/**/*.ts',
     ],
-    languageOptions: {
-      globals: {
-        ...globals.node, // ここでだけ Node.js のグローバル変数（processなど）を許可する
-      },
-    },
   },
 
   /** eslint推奨ルール */
