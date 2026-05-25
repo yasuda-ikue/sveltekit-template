@@ -224,7 +224,7 @@ export default defineConfig(
     files: ['**/*.stories.@(ts|js|svelte)'],
     extends: [
       // Storybook@10移行で型が通らなくなったのでいったんanyで回避（ルールは適用される）
-      ...storybook.configs['flat/recommended'] as any, // eslint-disable-line
+      ...storybook.configs['flat/recommended'] as any, // eslint-disable-line @typescript-eslint/no-explicit-any
     ],
   },
 
