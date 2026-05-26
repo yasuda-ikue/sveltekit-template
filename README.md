@@ -30,7 +30,7 @@
     │            └── about
     └── routes/       ※ ここではUIを作らず、componentsを呼び出してデータを渡すだけ
         ├── +page.svelte
-        └── */
+        └── (dir)/
             └── +page.svelte
 
 ```

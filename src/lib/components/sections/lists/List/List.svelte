@@ -1,9 +1,9 @@
 <!--
 @component
-# キービジュアル
+# リスト
 -->
 <script lang="ts"></script>
 
-<header class="key-visual">
-  Key Visual
-</header>
+<ul class="list">
+  <li class="list-item">List Item 1</li>
+</ul>
