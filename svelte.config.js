@@ -16,6 +16,11 @@ const config = {
       precompress: false,
       strict: true,
     }),
+    paths: {
+      // サブディレクトリ化する場合に使用
+      base: process.env.NODE_ENV === 'production' ? '/2025' : '',
+      // base: '',
+    },
   },
 };
 

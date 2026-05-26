@@ -1,42 +1,29 @@
-# sv
+# SvelteKit + Storybook
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+このリポジトリは、**SvelteKit**の最低限の環境に、UIコンポーネント開発環境の**Storybook**を統合したテンプレートです。
+パッケージマネージャーには **pnpm** を採用し、余分なツールを省きつつ必要に応じて拡張しやすい構成にしています。
 
-## Creating a project
+## 主なディレクトリ構成
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
 ```
+/
+├── static                # 静的ファイル
+└── src
+    ├── app.html          # ページのテンプレート
+    ├── routes            # アプリケーションのルート
+    └── lib
+        ├── components    # UIコンポーネント
+        │      └── component
+        │             ├── img
+        │             ├── index.ts
+        │             ├── *.stories.svelte
+        │             └── *.svelte
+        ├── constants     # 定数
+        ├── data          # jsonデータなど
+        ├── stores        # ストア
+        ├── styles        # スタイル
+        └── utils         # ユーティリティ
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-pnpm dlx sv@0.15.3 create --template minimal --types ts --install pnpm sveltekit-template
 ```
+- 詳細は[プロジェクト構成](https://svelte.jp/docs/kit/project-structure)（公式）をご確認ください
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
