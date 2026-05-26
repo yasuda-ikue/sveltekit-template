@@ -6,16 +6,13 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
   import { GTM_ID } from '$lib/constants/analytics';
+  import { dev } from '$app/environment';
 
   const { children }: { children: Snippet } = $props();
 </script>
 
 <svelte:head>
-  {#if GTM_ID}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}&l=NicoGoogleTagManagerDataLayer"
-    ></script>
+  {#if GTM_ID && !dev}
     <script>
       window.NicoGoogleTagManagerDataLayer = window.NicoGoogleTagManagerDataLayer || [];
       window.NicoGoogleTagManagerDataLayer.push({
@@ -23,12 +20,16 @@
       event: 'gtm.js',
       });
     </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}&l=NicoGoogleTagManagerDataLayer"
+    ></script>
   {/if}
 </svelte:head>
 
 {@render children()}
 
-{#if GTM_ID}
+{#if GTM_ID && !dev}
   <noscript>
     <iframe
       src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"
