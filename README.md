@@ -18,11 +18,11 @@
     │    ├── utils         # ユーティリティ
     │    └── components    # コンポーネント
     │        ├── ui        # Button, Icon など最小単位のパーツ
-    │        │   └── component
+    │        │   └── ComponentName　　# パスカルケースで命名
     │        │       ├── img
     │        │       ├── index.ts
-    │        │       ├── *.stories.svelte
-    │        │       └── *.svelte
+    │        │       ├── ComponentName.stories.svelte
+    │        │       └── ComponentName.svelte
     │        ├── layouts    # Header, Footer など全体共通の枠組み
     │        ├── sections   # 生放送リストなど、複数ページで使い回す大きめの塊
     │        └── pages      # 各ページ固有のパーツ
@@ -30,7 +30,7 @@
     │            └── about
     └── routes/       ※ ここではUIを作らず、componentsを呼び出してデータを渡すだけ
         ├── +page.svelte
-        └── about/
+        └── */
             └── +page.svelte
 
 ```
