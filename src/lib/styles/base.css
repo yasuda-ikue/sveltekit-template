@@ -1,0 +1,35 @@
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: middle;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type='button']:disabled,
+[type='reset']:disabled,
+[type='submit']:disabled {
+  cursor: default;
+}
+
+::placeholder {
+  color: #ccc;
+}
