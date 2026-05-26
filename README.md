@@ -11,23 +11,23 @@
 └── src
     ├── app.html          # ページのテンプレート
     ├── lib
-    │   └── components    # コンポーネント
-    │       ├── ui        # Button, Icon など最小単位のパーツ
-    │       │   └── component
-    │       │       ├── img
-    │       │       ├── index.ts
-    │       │       ├── *.stories.svelte
-    │       │       └── *.svelte
-    │       ├── layouts    # Header, Footer など全体共通の枠組み
-    │       ├── sections   # 生放送リストなど、複数ページで使い回す大きめの塊
-    │       └── pages      # 各ページ固有のパーツ
-    │           ├── top
-    │           └── about
-    ├── constants     # 定数
-    ├── data          # jsonデータなど
-    ├── stores        # ストア
-    ├── styles        # スタイル
-    ├── utils         # ユーティリティ
+    │    ├── constants     # 定数
+    │    ├── data          # jsonデータなど
+    │    ├── stores        # ストア
+    │    ├── styles        # スタイル
+    │    ├── utils         # ユーティリティ
+    │    └── components    # コンポーネント
+    │        ├── ui        # Button, Icon など最小単位のパーツ
+    │        │   └── component
+    │        │       ├── img
+    │        │       ├── index.ts
+    │        │       ├── *.stories.svelte
+    │        │       └── *.svelte
+    │        ├── layouts    # Header, Footer など全体共通の枠組み
+    │        ├── sections   # 生放送リストなど、複数ページで使い回す大きめの塊
+    │        └── pages      # 各ページ固有のパーツ
+    │            ├── top
+    │            └── about
     └── routes/       ※ ここではUIを作らず、componentsを呼び出してデータを渡すだけ
         ├── +page.svelte
         └── about/
