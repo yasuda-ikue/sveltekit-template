@@ -13,9 +13,9 @@
 
 <svelte:head>
   {#if CLARITY_ID && !dev}
+    <script async src="https://www.clarity.ms/tag/{CLARITY_ID}"></script>
     <script>
       window.clarity = window.clarity || function() {(window.clarity.q = window.clarity.q || []).push(arguments)};
     </script>
-    <script async src="https://www.clarity.ms/tag/{CLARITY_ID}"></script>
   {/if}
 </svelte:head>

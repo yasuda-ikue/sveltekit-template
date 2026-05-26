@@ -13,6 +13,10 @@
 
 <svelte:head>
   {#if GTM_ID && !dev}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}&l=NicoGoogleTagManagerDataLayer"
+    ></script>
     <script>
       window.NicoGoogleTagManagerDataLayer = window.NicoGoogleTagManagerDataLayer || [];
       window.NicoGoogleTagManagerDataLayer.push({
@@ -20,10 +24,6 @@
       event: 'gtm.js',
       });
     </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}&l=NicoGoogleTagManagerDataLayer"
-    ></script>
   {/if}
 </svelte:head>
 
