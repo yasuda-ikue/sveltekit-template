@@ -18,8 +18,8 @@ const config = {
     }),
     paths: {
       // サブディレクトリ化する場合に使用
-      base: process.env.NODE_ENV === 'production' ? '/2025' : '',
-      // base: '',
+      // base: process.env.NODE_ENV === 'production' ? '/2026' : '',
+      base: '',
     },
   },
 };
