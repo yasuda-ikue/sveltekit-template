@@ -10,19 +10,28 @@
 ├── static                # 静的ファイル
 └── src
     ├── app.html          # ページのテンプレート
-    ├── routes            # アプリケーションのルート
-    └── lib
-        ├── components    # UIコンポーネント
-        │      └── component
-        │             ├── img
-        │             ├── index.ts
-        │             ├── *.stories.svelte
-        │             └── *.svelte
-        ├── constants     # 定数
-        ├── data          # jsonデータなど
-        ├── stores        # ストア
-        ├── styles        # スタイル
-        └── utils         # ユーティリティ
+    ├── lib
+    │   └── components    # コンポーネント
+    │       ├── ui        # Button, Icon など最小単位のパーツ
+    │       │   └── component
+    │       │       ├── img
+    │       │       ├── index.ts
+    │       │       ├── *.stories.svelte
+    │       │       └── *.svelte
+    │       ├── layouts    # Header, Footer など全体共通の枠組み
+    │       ├── sections   # 生放送リストなど、複数ページで使い回す大きめの塊
+    │       └── pages      # 各ページ固有のパーツ
+    │           ├── top
+    │           └── about
+    ├── constants     # 定数
+    ├── data          # jsonデータなど
+    ├── stores        # ストア
+    ├── styles        # スタイル
+    ├── utils         # ユーティリティ
+    └── routes/       ※ ここではUIを作らず、componentsを呼び出してデータを渡すだけ
+        ├── +page.svelte
+        └── about/
+            └── +page.svelte
 
 ```
 - 詳細は[プロジェクト構成](https://svelte.jp/docs/kit/project-structure)（公式）をご確認ください

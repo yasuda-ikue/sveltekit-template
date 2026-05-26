@@ -36,6 +36,7 @@
   "files.exclude": {
     "**/*.ts.map": true,
     "**/*.css.d.ts": true,
+    "**/.svelte-kit/**": true,
   },
   "files.insertFinalNewline": true
 }
