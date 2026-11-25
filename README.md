@@ -3,6 +3,16 @@
 このリポジトリは、**SvelteKit**の最低限の環境に、UIコンポーネント開発環境の**Storybook**を統合したテンプレートです。
 パッケージマネージャーには **pnpm** を採用し、余分なツールを省きつつ必要に応じて拡張しやすい構成にしています。
 
+## セットアップ
+
+Node.js と pnpm のバージョンは [mise](https://mise.jdx.dev/) で管理しています（`mise.toml`）。
+
+```sh
+mise install   # Node.js / pnpm をインストール
+pnpm install
+pnpm dev
+```
+
 ## 主なディレクトリ構成
 
 ```
