@@ -8,7 +8,7 @@ import unicornPlugin from 'eslint-plugin-unicorn';
 import importPlugin from 'eslint-plugin-import';
 import stylistic from '@stylistic/eslint-plugin';
 import svelte from 'eslint-plugin-svelte';
-import svelteConfig from './svelte.config.js';
+import svelteConfig from './sveltekit.config.js';
 
 /**
  * eslint設定
@@ -50,7 +50,7 @@ export default defineConfig(
       'src/**/*.server.ts',
       'src/**/*.server.js',
       'vite.config.ts',
-      'svelte.config.js',
+      'sveltekit.config.js',
       '.storybook/**/*.ts',
     ],
     languageOptions: {
