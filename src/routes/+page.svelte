@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { SITE_TITLE, SITE_DESCRIPTION } from '$lib/constants/site';
+  import { SITE_TITLE, SITE_DESCRIPTION } from '#lib/constants/site';
 </script>
 
 <svelte:head>
