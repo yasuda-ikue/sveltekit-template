@@ -5,7 +5,7 @@ import tseslint from 'typescript-eslint';
 import tsParser from '@typescript-eslint/parser';
 import globals from 'globals';
 import unicornPlugin from 'eslint-plugin-unicorn';
-import importPlugin from 'eslint-plugin-import';
+import { importX } from 'eslint-plugin-import-x';
 import stylistic from '@stylistic/eslint-plugin';
 import svelte from 'eslint-plugin-svelte';
 import svelteConfig from './sveltekit.config.js';
@@ -115,7 +115,7 @@ export default defineConfig(
     ],
     plugins: {
       unicorn: unicornPlugin,
-      import: importPlugin,
+      import: importX,
     },
     rules: {
       '@typescript-eslint/array-type': 'off',
